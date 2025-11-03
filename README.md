@@ -1,2 +1,216 @@
-# home-made-food-delivery
-food delivery
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homemade Food Delivery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #ff7043, #ff9800);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #fff3e0;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      text-decoration: none;
+      color: #ff5722;
+      font-weight: 600;
+      margin: 0 20px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #e64a19;
+    }
+    section {
+      padding: 50px 10%;
+      text-align: center;
+    }
+    h2 {
+      color: #ff5722;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .menu-item {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    }
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .menu-item h3 {
+      color: #ff7043;
+      margin: 15px 0 5px;
+    }
+    .menu-item p {
+      padding: 0 10px 15px;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    form button {
+      background: linear-gradient(to right, #ff7043, #ff9800);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+    form button:hover {
+      background: linear-gradient(to right, #e64a19, #ff7043);
+    }
+    footer {
+      background: #ff7043;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+    .contact-info p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🍱 Homemade Food Delivery</h1>
+  <p>Fresh • Healthy • Tasty Meals at Your Doorstep</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#order">Order</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+  <h2>Welcome to Our Homemade Kitchen</h2>
+  <p>We provide healthy, hygienic, and delicious home-cooked meals made with love. Perfect for students, office workers, and families who miss the taste of home!</p>
+  <p>💚 Eat Fresh | 🍛 Eat Healthy | 🚚 Fast Delivery</p>
+</section>
+
+<section id="menu">
+  <h2>Our Menu</h2>
+  <div class="menu">
+    <div class="menu-item">
+      <img src="https://c8.alamy.com/comp/2T34JKK/indian-vegetarian-thali-or-platter-includes-aloo-ki-sabji-dal-rice-roti-bhaji-matar-paneer-sheera-or-suji-ka-halwa-chapati-indian-food-sheera-2T34JKK.jpg" alt="Veg Thali">
+      <h3>Veg Thali</h3>
+      <p>Chapati, Rice, Dal, Sabji - ₹80</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://th.bing.com/th/id/OIP.3tes0u-whwhpy9NVovkYagHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Non-Veg Thali">
+      <h3>Non-Veg Thali</h3>
+      <p>Chicken Curry, Rice, Chapati - ₹120</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://yumiirecipe.com/wp-content/uploads/2024/04/Samosa-Wrappers-Recipe.jpg" alt="Snacks">
+      <h3>Snacks Combo</h3>
+      <p>Samosa - ₹20</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://th.bing.com/th/id/OIP.1cOCEUVVTQYPNNrn2SXIdgHaE7?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3a" alt="Dessert">
+      <h3>Sweet Delight</h3>
+      <p>Cakes - ₹50</p>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <h2>Place Your Order</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <textarea placeholder="Delivery Address" rows="3" required></textarea>
+    <textarea placeholder="Your Order Details (e.g., Veg Thali x2)" rows="3" required></textarea>
+    <button type="submit">Submit Order</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <p>📧 homemadefood@gmail.com</p>
+    <p>📍 Pune, Maharashtra</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Homemade Food Delivery | Fresh Food, Fast Service 🍛</p>
+</footer>
+
+</body>
+</html>
